@@ -20,4 +20,4 @@ public class InMemorySessionRepository : ISessionRepository
     }
 }
 
-//Комментарий для коммита
+// Комментарий для коммита
