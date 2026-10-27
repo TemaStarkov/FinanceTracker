@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
     <PropertyGroup>
-        <RootNamespace>Itmo.ObjectOrientedProgramming.Lab5.Tests</RootNamespace>
+        <RootNamespace>FinanceTracker.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,8 +17,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Lab5\Application\Application.csproj" />
-        <ProjectReference Include="..\..\src\Lab5\DomainModel\DomainModel.csproj" />
+        <ProjectReference Include="..\..\src\FinanceTracker\Application\Application.csproj" />
+        <ProjectReference Include="..\..\src\FinanceTracker\DomainModel\DomainModel.csproj" />
     </ItemGroup>
 
 

@@ -3,14 +3,16 @@ using Application.Services;
 using DomainModel;
 using DomainModel.Exceptions;
 using NSubstitute;
+using System;
+using System.Threading.Tasks;
 using Xunit;
 
-namespace Itmo.ObjectOrientedProgramming.Lab5.Tests;
+namespace FinanceTracker.Tests;
 
 public class AccountServiceTests
 {
     [Fact]
-    public async Task Withdraw_WithSufficientBalance_UpdatesAccountBalance()
+    public async Task WithdrawWithSufficientBalanceUpdatesAccountBalance()
     {
         IAccountRepository accountRepository = Substitute.For<IAccountRepository>();
         ISessionRepository sessionRepository = Substitute.For<ISessionRepository>();
@@ -32,7 +34,7 @@ public class AccountServiceTests
     }
 
     [Fact]
-    public async Task Withdraw_WithInsufficientBalance_ThrowsException()
+    public async Task WithdrawWithInsufficientBalanceThrowsException()
     {
         IAccountRepository accountRepository = Substitute.For<IAccountRepository>();
         ISessionRepository sessionRepository = Substitute.For<ISessionRepository>();
@@ -50,7 +52,7 @@ public class AccountServiceTests
     }
 
     [Fact]
-    public async Task Deposit_WithValidAmount_UpdatesAccountBalance()
+    public async Task DepositWithValidAmountUpdatesAccountBalance()
     {
         IAccountRepository accountRepository = Substitute.For<IAccountRepository>();
         ISessionRepository sessionRepository = Substitute.For<ISessionRepository>();
@@ -71,7 +73,7 @@ public class AccountServiceTests
     }
 
     [Fact]
-    public async Task Withdraw_CreatesTransaction()
+    public async Task WithdrawCreatesTransaction()
     {
         IAccountRepository accountRepository = Substitute.For<IAccountRepository>();
         ISessionRepository sessionRepository = Substitute.For<ISessionRepository>();
@@ -94,7 +96,7 @@ public class AccountServiceTests
     }
 
     [Fact]
-    public async Task Deposit_CreatesTransaction()
+    public async Task DepositCreatesTransaction()
     {
         IAccountRepository accountRepository = Substitute.For<IAccountRepository>();
         ISessionRepository sessionRepository = Substitute.For<ISessionRepository>();
